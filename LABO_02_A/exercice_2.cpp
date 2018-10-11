@@ -21,6 +21,7 @@ using namespace std;
 int ex2() {
   
    
-   cout << "Hello world" << endl;
+   cout << "Appuyez sur une touche pour continuer..." << endl;
+   cin.get();
    return EXIT_SUCCESS;
 }
