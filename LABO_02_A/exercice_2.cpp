@@ -58,5 +58,7 @@ int main() {
         << nombre_x * COTE + nombre_y + 1 
         << endl;
    
+   cout << "Appuyez sur une touche pour continuer..." << endl;
+   cin.get();
    return EXIT_SUCCESS;
 }
