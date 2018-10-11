@@ -33,13 +33,12 @@ int main() {
    
    int compteur = 0;
    
-   while(quotient > base && reste > 0){
+   while(quotient > 0){
       reste = quotient % base;
       quotient = quotient / base;
       
       resultat += reste * pow(10, compteur);
-      cout << "res: " << resultat << endl;
-      cout <<"quot: " << quotient << endl;
+      
       compteur++;
       
    }
