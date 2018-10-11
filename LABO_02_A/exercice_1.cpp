@@ -21,36 +21,35 @@
 
 using namespace std;
 
-const int BASE_DEPART = 10;
+const int BASE_AFFICHAGE = 10;
 
 int main() {
   
    unsigned int n;
-   int baseArrivee,
-       reste = 0,
-       resultat = 0,
-       compteur = 0;
+   unsigned long long resultat = 0;
+   unsigned int reste = 0;
+   unsigned int base_arrivee, compteur = 0;
    
    cout << "Veuillez entrée votre nombre (entre 0 et 1'000'000): ";
    cin >> n;
    cout << endl;
    cout << "Veuillez entrée la base (entre 2 et 9): ";
-   cin >> baseArrivee;
+   cin >> base_arrivee;
    
    int quotient = n;
    
    while(quotient > 0){
-      reste = quotient % baseArrivee;
-      quotient = quotient / baseArrivee;
-      
-      resultat += reste * pow(BASE_DEPART, compteur);
+      reste = quotient % base_arrivee;
+      quotient = quotient / base_arrivee;
+      cout << "blabvla => " << reste * pow(BASE_AFFICHAGE, compteur) << endl;
+      resultat += reste * (unsigned long long) pow(BASE_AFFICHAGE, compteur);
       
       compteur++;
    }
    
    cout << fixed;
-   cout << "(" << n        << ")" << BASE_DEPART   << " =  ";
-   cout << "(" << resultat << ")" << baseArrivee   << endl;
+   cout << "(" << n        << ")" << BASE_AFFICHAGE   << " =  ";
+   cout << "(" << resultat << ")" << base_arrivee   << endl;
    
    cout << "Veuilleu appuyez sur une touche pour continuer..." << endl;
    cin.get();
