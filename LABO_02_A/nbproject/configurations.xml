@@ -12,6 +12,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>exercice_1.cpp</itemPath>
+      <itemPath>exercice_2.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -40,6 +42,10 @@
           <commandLine>-Wall -Wconversion -Wextra -pedantic</commandLine>
         </ccTool>
       </compileType>
+      <item path="exercice_1.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="exercice_2.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -64,6 +70,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="exercice_1.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="exercice_2.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>

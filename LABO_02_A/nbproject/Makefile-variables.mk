@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=template_netbeans
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/template_netbeans
+CND_ARTIFACT_NAME_Debug=labo_02_a
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/labo_02_a
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
-CND_PACKAGE_NAME_Debug=templatenetbeans.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/templatenetbeans.tar
+CND_PACKAGE_NAME_Debug=labo02a.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/labo02a.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
-CND_ARTIFACT_NAME_Release=template_netbeans
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/template_netbeans
+CND_ARTIFACT_NAME_Release=labo_02_a
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/labo_02_a
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
-CND_PACKAGE_NAME_Release=templatenetbeans.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/templatenetbeans.tar
+CND_PACKAGE_NAME_Release=labo02a.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/labo02a.tar
 #
 # include compiler specific variables
 #

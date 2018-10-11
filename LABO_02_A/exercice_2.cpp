@@ -18,7 +18,7 @@
 
 using namespace std;
 
-int main() {
+int ex2() {
   
    
    cout << "Hello world" << endl;
