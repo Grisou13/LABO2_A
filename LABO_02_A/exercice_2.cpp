@@ -6,20 +6,21 @@
  Date        : 26.09.2018
 
  But         : Demande à l'utilisateur d'entrer un numéro de case d'un damier 
- *             de hauteur et largeur déterminé. Puis, affiche les numéros de cases
+ *             de hauteur et largeur déterminées puis affiche les numéros des cases
  *             des symétries suivantes :
  *                - Symétrie verticale
  *                - Symétrie horizontale
  *                - Symétrie diagonale gauche
  *                - Symétrie diagonale droite.
 
- Remarque(s) : - Aucun contrôle sur la saisie utilisateur n'est faite.
- *             - Les dimensions du damier peuvent être pair ou impair.
- *             - Les dimensions du damier doivent être égaux.
+ Remarque(s) : - Aucun contrôle sur la saisie utilisateur n'est fait.
+ *             - Le côté du damier peut être pair ou impair.
+ *             - Les diagonales ne faisant pas partie des axes de symétrie d'un 
+ *               rectangle, le damier doit être carré.
 
  Compilateur : - g++ (Ubuntu 5.4.0-6ubuntu1~16.04.10), 
  *             - Apple LLVM version 9.0.0 (clang-900.0.39.2),
- *             - ...
+ *             - g++ (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
  -----------------------------------------------------------------------------------
  */
 
@@ -34,27 +35,41 @@ int main() {
    const int COTE = 8;
 
    int nombre;
-   cout << "Choisissez nombre entier: ";
+   cout << "Choisissez un numero de case entre 1 et " << COTE * COTE << " : ";
    cin >> nombre;
    
+   // Passage d'une numérotation "linéaire" des cases à un système de coordonnées
+   // dont l'origine est située sur la case en haut à gauche du damier.
    int nombre_x = (nombre - 1) % COTE;
    int nombre_y = (nombre - 1) / COTE;
-    
+   
+   // Calcul des coordonnés de la case symétrique par rapport à l'axe horizontal.
    int sym_horizontale_y = COTE - nombre_y - 1;
    int sym_horizontale_x = nombre_x;
-   cout << "Symetrie horizontale : " << sym_horizontale_y * COTE + sym_horizontale_x + 1 << endl;
    
+   // Les coordonnées sont reconverties en un numéro de case avant d'être affichées
+   cout << "Case symétrique par rapport à l'axe horizontal : " 
+        << sym_horizontale_y * COTE + sym_horizontale_x + 1 
+        << endl;
+   
+   // Calcul des coordonnés de la case symétrique par rapport à l'axe vertical.
    int sym_verticale_y = nombre_y;
    int sym_verticale_x = COTE - nombre_x - 1;
-   cout << "Symetrie verticale : " << sym_verticale_y * COTE + sym_verticale_x + 1 << endl;
+   cout << "Case symétrique par rapport à l'axe vertical : " 
+        << sym_verticale_y * COTE + sym_verticale_x + 1 
+        << endl;
    
-   int sym_diag_droite_x = COTE - nombre_y  - 1;
+   // Calcul des coordonnés de la case symétrique par rapport à la diagonale droite.
+   int sym_diag_droite_x = COTE - nombre_y - 1;
    int sym_diag_droite_y = COTE - nombre_x - 1;
-   cout << "Symetrie diagonale de droite : " 
+   cout << "Case symétrique par rapport à la diagonale droite : " 
         << sym_diag_droite_y * COTE + sym_diag_droite_x + 1 
         << endl;
   
-   cout << "Symetrie diagonale de gauche : " 
+   // Calcul des coordonnés de la case symétrique par rapport à la diagonale gauche
+   // (les coordonnés étant ici simplement inversées, elles sont directement
+   // reconverties en numéro de case sans étape intermédiaire).
+   cout << "Case symétrique par rapport à la diagonale gauche : " 
         << nombre_x * COTE + nombre_y + 1 
         << endl;
    
