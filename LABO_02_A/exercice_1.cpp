@@ -1,9 +1,9 @@
 /*
  -----------------------------------------------------------------------------------
- Laboratoire : 02_a
+ Laboratoire : 02_A
  Fichier     : exercice_1.cpp
  Auteur(s)   : Thomas Ricci, Eric Bousbaa, Thibaud Franchetti
- Date        : 26.09.2018
+ Date        : 10.10.2018
 
  But         : Convertir un nombre entier n d'une base d'affichage définie, 
                vers une base saisie par l'utilisateur.
@@ -24,34 +24,46 @@
 
 using namespace std;
 
-const int BASE_AFFICHAGE = 10;
 
 int main() {
   
-   unsigned int n;
-   unsigned long long resultat = 0;
-   unsigned int reste = 0;
-   unsigned int base_arrivee, compteur = 0;
+   const int N_MIN = 0,
+             N_MAX = 1000000;
+   const unsigned int BASE_MIN = 2,
+                      BASE_MAX = 9,
+                      BASE_AFFICHAGE = 10;
+
+   unsigned long long resultat = 0; // Le type unsigned long long est nécessaire à
+                                    // l'affichage de n proche de 1E6 en base 2 dans
+                                    // un environnement Windows classique de 2018
+                                    // avec le compilateur MinGW-g++
+   int n,         // Nombre saisi par l'utilisateur
+       quotient;  
+   unsigned int base_arrivee, // Base dans laquelle n sera converti
+                reste = 0;
    
-   cout << "Veuillez entrer votre nombre (entre 0 et 1'000'000): ";
+   cout << "Veuillez entrer un nombre entier (entre " << N_MIN << " et " << N_MAX
+        << ") : ";
    cin >> n;
-   cout << endl;
-   cout << "Veuillez entrer la base (entre 2 et 9): ";
+   
+   cout << "Veuillez entrer la base (entre " << BASE_MIN << " et " << BASE_MAX
+        << ") dans laquelle votre nombre sera converti : ";
    cin >> base_arrivee;
    
-   int quotient = n;
-   
+   quotient = n;
+   int compteur = 0;
    while (quotient > 0) {
       reste = quotient % base_arrivee;
-      quotient = quotient / base_arrivee;
-      cout << "blabvla => " << reste * pow(BASE_AFFICHAGE, compteur) << endl;
+      quotient /= base_arrivee;
+      
+      // Calcul du (compteur + 1)-ième chiffre depuis la droite dans la base
+      // d'arrivée
       resultat += reste * (unsigned long long) pow(BASE_AFFICHAGE, compteur);
       
       compteur++;
    }
    
-   cout << fixed;
-   cout << "(" << n        << ")" << BASE_AFFICHAGE   << " =  ";
+   cout << "(" << n        << ")" << BASE_AFFICHAGE   << " = ";
    cout << "(" << resultat << ")" << base_arrivee   << endl;
    
    cout << "Veuillez appuyez sur une touche pour continuer..." << endl;
