@@ -29,11 +29,11 @@
 
 using namespace std;
 
-int main() {
+int main(){
   
    const int COTE = 8;
-
    int nombre;
+   
    cout << "Choisissez un numero de case entre 1 et " << COTE * COTE << " : ";
    cin >> nombre;
    
@@ -45,16 +45,15 @@ int main() {
    // Calcul des coordonnés de la case symétrique par rapport à l'axe horizontal.
    int sym_horizontale_y = COTE - nombre_y - 1;
    int sym_horizontale_x = nombre_x;
-   
-   // Les coordonnées sont reconverties en un numéro de case avant d'être affichées
-   cout << "Case symetrique par rapport a l'axe horizontal : " 
+   // Les coordonnées sont reconverties en un numéro de case avant d'être affichées.
+   cout << "Case symetrique par rapport a l'axe horizontal    : " 
         << sym_horizontale_y * COTE + sym_horizontale_x + 1 
         << endl;
    
    // Calcul des coordonnés de la case symétrique par rapport à l'axe vertical.
    int sym_verticale_y = nombre_y;
    int sym_verticale_x = COTE - nombre_x - 1;
-   cout << "Case symetrique par rapport a l'axe vertical : " 
+   cout << "Case symetrique par rapport a l'axe vertical      : " 
         << sym_verticale_y * COTE + sym_verticale_x + 1 
         << endl;
    
@@ -64,15 +63,14 @@ int main() {
    cout << "Case symetrique par rapport a la diagonale droite : " 
         << sym_diag_droite_y * COTE + sym_diag_droite_x + 1 
         << endl;
-  
-   // Calcul des coordonnés de la case symétrique par rapport à la diagonale gauche
-   // (les coordonnés étant ici simplement inversées, elles sont directement
-   // reconverties en numéro de case sans étape intermédiaire).
+   
+   // Calcul des coordonnés de la case symétrique par rapport à la diagonale gauche.
    cout << "Case symetrique par rapport a la diagonale gauche : " 
         << nombre_x * COTE + nombre_y + 1 
         << endl;
    
    cout << "Appuyez sur une touche pour continuer..." << endl;
    cin.get();
+   
    return EXIT_SUCCESS;
 }
