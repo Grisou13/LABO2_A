@@ -6,21 +6,21 @@
  Date        : 17.10.2018
 
  But         : Demande à l'utilisateur d'entrer un numéro de case d'un damier 
- *             de hauteur et largeur déterminées puis affiche les numéros des cases
- *             des symétries suivantes :
- *                - Symétrie verticale
- *                - Symétrie horizontale
- *                - Symétrie diagonale gauche
- *                - Symétrie diagonale droite.
+               de hauteur et largeur déterminées puis affiche les numéros des cases
+               des symétries suivantes :
+                  - Symétrie verticale
+                  - Symétrie horizontale
+                  - Symétrie diagonale gauche
+                  - Symétrie diagonale droite.
 
  Remarque(s) : - Aucun contrôle sur la saisie utilisateur n'est fait.
- *             - Le côté du damier peut être pair ou impair.
- *             - Les diagonales ne faisant pas partie des axes de symétrie d'un 
- *               rectangle, le damier doit être carré.
+               - Le côté du damier peut être pair ou impair.
+               - Les diagonales ne faisant pas partie des axes de symétrie d'un 
+                 rectangle, le damier doit être carré.
 
  Compilateur : - g++ (Ubuntu 5.4.0-6ubuntu1~16.04.10), 
- *             - Apple LLVM version 9.0.0 (clang-900.0.39.2),
- *             - g++ (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
+               - Apple LLVM version 9.0.0 (clang-900.0.39.2),
+               - g++ (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
  -----------------------------------------------------------------------------------
  */
 
