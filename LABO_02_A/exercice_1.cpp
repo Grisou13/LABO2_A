@@ -9,12 +9,13 @@
                vers une base saisie par l'utilisateur.
 
  Remarque(s) : - Le programme ne teste pas les entrées utilisateur et estime 
- *               qu'elles sont correctes.
+                 qu'elles sont correctes.
+               - Le programme ne gère que les nombre entre 0 et 1'000'000
                - Si le nombre converti commence par un 0, ce dernier sera tronqué.
- * 
+  
  Compilateur : - g++ (Ubuntu 5.4.0-6ubuntu1~16.04.10), 
- *             - Apple LLVM version 9.0.0 (clang-900.0.39.2),
- *             - g++ (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
+               - Apple LLVM version 9.0.0 (clang-900.0.39.2),
+               - g++ (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
  -----------------------------------------------------------------------------------
  */
 
@@ -43,13 +44,13 @@ int main() {
                 quotient,
                 base_arrivee, // Base dans laquelle n sera converti
                 reste = 0;
-   
+   cout << "Convertisseur de nombre (entier) vers une autre base " << endl;
    cout << "Veuillez entrer un nombre entier (entre " << N_MIN << " et " << N_MAX
         << ") : ";
    cin >> n;
    
    cout << "Veuillez entrer la base (entre " << BASE_MIN << " et " << BASE_MAX
-        << ") dans laquelle votre nombre sera converti : ";
+        << ") : ";
    cin >> base_arrivee;
    
    quotient = n;
@@ -65,7 +66,7 @@ int main() {
       compteur++;
    }
    
-   cout << "(" << n        << ")" << BASE_AFFICHAGE   << " = ";
+   cout << "(" << n        << ")" << BASE_AFFICHAGE << " = ";
    cout << "(" << resultat << ")" << base_arrivee   << endl;
    
    cout << "Veuillez appuyez sur une touche pour continuer..." << endl;
