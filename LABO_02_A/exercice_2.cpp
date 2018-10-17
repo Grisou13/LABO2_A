@@ -3,7 +3,7 @@
  Laboratoire : 02_A
  Fichier     : exercice_2.cpp
  Auteur(s)   : Thomas Ricci, Eric Bousbaa, Thibaud Franchetti
- Date        : 10.10.2018
+ Date        : 17.10.2018
 
  But         : Demande à l'utilisateur d'entrer un numéro de case d'un damier 
  *             de hauteur et largeur déterminées puis affiche les numéros des cases

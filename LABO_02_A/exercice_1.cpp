@@ -3,7 +3,7 @@
  Laboratoire : 02_A
  Fichier     : exercice_1.cpp
  Auteur(s)   : Thomas Ricci, Eric Bousbaa, Thibaud Franchetti
- Date        : 10.10.2018
+ Date        : 17.10.2018
 
  But         : Convertir un nombre entier n d'une base d'affichage définie, 
                vers une base saisie par l'utilisateur.
